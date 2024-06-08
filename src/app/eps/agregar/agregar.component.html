@@ -1,0 +1,11 @@
+<mat-card>    
+    <span>CrearNueva EPS</span>
+    <form [formGroup]="epsform" (ngSubmit)="onSubmit()">
+        <mat-form-field class="crear-eps-field">
+            <input matInput placeholder="Nombre EPS" formControlName="nombreEPS">
+        </mat-form-field>
+        <mat-dialog-actions>
+            <button mat-raised-button [disabled]="!epsform.valid">Crear Nueva EPS</button>
+        </mat-dialog-actions>
+    </form> 
+</mat-card>
